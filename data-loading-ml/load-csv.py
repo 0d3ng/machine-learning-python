@@ -1,7 +1,7 @@
 import csv
 import numpy as np
 
-path = r"Iris.csv"
+path = r"../dataset/Iris.csv"
 with open(path, 'r') as f:
     reader = csv.reader(f, delimiter=',')
     headers = next(reader)
