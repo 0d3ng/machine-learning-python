@@ -13,7 +13,7 @@ h = (x_max / x_min) / 100
 xx, yy = np.meshgrid(np.arange(x_min, x_max, h), np.arange(y_min, y_max, h))
 X_plot = np.c_[xx.ravel(), yy.ravel()]
 
-svc_classifier = svm.SVC(kernel='linear', C=1.0).fit(X, y)
+svc_classifier = svm.SVC(kernel='rbf', C=1.0).fit(X, y)
 Z = svc_classifier.predict(X_plot)
 Z = Z.reshape(xx.shape)
 plt.figure(figsize=(15, 5))
