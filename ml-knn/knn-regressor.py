@@ -10,7 +10,9 @@ print(dataset.head())
 array = dataset.values
 
 X = array[:, :2]
+print(X)
 y = array[:, 2]
+print(y)
 print(dataset.shape)
 
 classifier = KNeighborsRegressor(n_neighbors=8)
